@@ -9,9 +9,9 @@ export const fetchProducts = async (): Promise<Product[]> => {
       const products: Product[] = await response.json();
       return products.map(product => ({
         id: product.id,
-        name: product.name, // Assuming the API uses 'title' for product name
+        name: product.name, 
         price: product.price,
-        image: product.image, // Adjust property names to match API response
+        image: product.image,
       }));
     } catch (error) {
       console.error("Error fetching products:", error);
